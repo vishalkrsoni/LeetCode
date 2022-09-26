@@ -79,9 +79,9 @@ LL1.insertatEnd(4)
 LL1.insertatEnd(5)
 
 let LL2 = new LinkedList()
-var reverseList = function (head) {
+
+const reverseList = (head) => {
   let curr = head, next, prev = null;
-  if (head == null) return `Empty List`
   while (curr !== null) {
     next = curr.next
     curr.next = prev
@@ -90,5 +90,5 @@ var reverseList = function (head) {
   }
   head = prev
   return head
-};
+}
 console.log(reverseList(LL1.head))
