@@ -61,17 +61,6 @@ class LinkedList {
   }
 }
 
-
-let list = new LinkedList()
-list.insertAtEnd(1)
-list.insertAtEnd(2)
-list.insertAtEnd(3)
-list.insertAtEnd(4)
-list.insertAtEnd(5)
-// list.insertAtEnd(6)
-
-let h = list.head
-
 var middleNode = function (head) {
   let size = 0
   let curr = head
@@ -87,4 +76,23 @@ var middleNode = function (head) {
   }
   return curr
 }
-console.log(middleNode(h))
+
+let list = new LinkedList()
+list.insertAtEnd(1)
+list.insertAtEnd(2)
+list.insertAtEnd(3)
+list.insertAtEnd(4)
+list.insertAtEnd(5)
+list.insertAtEnd(6)
+let hd = list.head
+
+let list1 = new LinkedList()
+list1.insertAtEnd(1)
+list1.insertAtEnd(2)
+list1.insertAtEnd(3)
+list1.insertAtEnd(4)
+list1.insertAtEnd(5)
+let hd1=list1.head
+
+console.log(middleNode(hd))
+console.log(middleNode(hd1))
