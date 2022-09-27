@@ -9,30 +9,26 @@ class LinkedList {
     this.head = null;
     this.size = 0;
   }
-  insertAtEnd(value) {
+  insertAtEnd = (value) => {
     let current;
     let node = new Node(value);
-    if (this.head == null) {
-      this.head = node;
-    }
+    if (this.head == null) this.head = node;
     else {
       current = this.head;
-      while (current.next != null) {
-        current = current.next;
-      }
+      while (current.next != null) current = current.next;
       current.next = node;
     }
     this.size++;
   }
 
-  insertAtStart(value) {
+  insertAtStart = (value) => {
     let node = new Node(value);
     node.next = this.head;
     this.head = node;
     this.size++;
   }
 
-  printLL() {
+  printLL = () => {
     let current = this.head;
     while (current != null) {
       console.log(current.value)
@@ -45,7 +41,7 @@ class LinkedList {
     let node = new Node(value);
     let current = this.head;
     let ctr = 1;
-    while (ctr != (pos - 1)) {//false => ctr==(pos-1)
+    while (ctr != (pos - 1)) {
       current = current.next;
       ctr += 1;
     }
@@ -63,8 +59,6 @@ class LinkedList {
     }
     console.log(`${current.value} is at index ${ctr}`);
   }
-  length = () => this.size
-
 }
 
 
