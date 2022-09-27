@@ -79,13 +79,13 @@ list.insertAtEnd(5)
 let h = list.head
 
 var middleNode = function (head) {
-  let count = 0
+  let size = 0
   let curr = head
   while (curr != null) {
     curr = curr.next
-    count++
+    size++
   }
-  let target = count % 2 === 0 ? (count / 2) + 1 : (count + 1) / 2
+  let target = (size % 2 === 0) ? (size / 2) + 1 : (size + 1) / 2
   curr = head
   while (target > 1) {
     curr = curr.next
