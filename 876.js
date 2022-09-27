@@ -5,10 +5,12 @@ class Node {
   }
 }
 class LinkedList {
+
   constructor() {
     this.head = null;
     this.size = 0;
   }
+
   insertAtEnd = (value) => {
     let current;
     let node = new Node(value);
@@ -92,7 +94,7 @@ list1.insertAtEnd(2)
 list1.insertAtEnd(3)
 list1.insertAtEnd(4)
 list1.insertAtEnd(5)
-let hd1=list1.head
+let hd1 = list1.head
 
 console.log(middleNode(hd))
 console.log(middleNode(hd1))
