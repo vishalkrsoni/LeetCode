@@ -81,12 +81,12 @@ LL1.insertatEnd(5)
 let LL2 = new LinkedList()
 
 const reverseList = (head) => {
-  let curr = head, next, prev = null;
-  while (curr !== null) {
-    next = curr.next
+  let curr = head, nxt, prev = null;
+  while (curr != null) {
+    nxt = curr.next
     curr.next = prev
     prev = curr
-    curr = next
+    curr = nxt
   }
   head = prev
   return head
