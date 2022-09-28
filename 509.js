@@ -1,1 +1,1 @@
-var fib = (num) => (num <= 1) ? n : fib(n - 1) + fib(n - 2)
+var fib = (number) => (number <= 1) ? number : fib(number - 1) + fib(number - 2)
