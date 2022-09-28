@@ -1,1 +1,4 @@
-var fib = (number) => (number <= 1) ? number : fib(number - 1) + fib(number - 2)
+var fib = function (num) {
+  if (num <= 1) return num;
+  else return fib(num - 1) + fib(num - 2)
+}
