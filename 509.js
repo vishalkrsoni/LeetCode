@@ -1,8 +1,11 @@
 
 var fib = function (num) {
-  if (num <= 1) return num;
-  else return fib(num - 1) + fib(num - 2)
+  let cache = new Array(num + 1)
+  cache[0] = 0
+  cache[1] = cache[2] = 1
+  for (let i = 3; i <= num; i++)
+    cache[i] = cache[i - 1] + cache[i - 2]
+  return cache[num]
 }
 
-console.log(fib(125))
-console.log(count)
+console.log(fib(5))
