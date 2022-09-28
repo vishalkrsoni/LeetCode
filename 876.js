@@ -5,13 +5,12 @@ class Node {
   }
 }
 class LinkedList {
-
   constructor() {
     this.head = null;
     this.size = 0;
   }
 
-  insertAtEnd = (value) => {
+  insert = (value) => {
     let current;
     let node = new Node(value);
     if (this.head == null) this.head = node;
@@ -23,33 +22,33 @@ class LinkedList {
     this.size++;
   }
 
-  insertAtStart = (value) => {
-    let node = new Node(value);
-    node.next = this.head;
-    this.head = node;
-    this.size++;
-  }
-
-  printLL = () => {
+  printList = () => {
     let current = this.head;
+    let nodes = []
     while (current != null) {
-      console.log(current.value)
+      nodes.push(current.value)
       current = current.next
     }
-    console.log(current);
+    console.log(nodes);
   }
 
-  insertAt = (value, pos) => {
+  insertStart = (value, pos) => {
     let node = new Node(value);
-    let current = this.head;
-    let ctr = 1;
-    while (ctr != (pos - 1)) {
-      current = current.next;
-      ctr += 1;
+    if (pos == 0 || pos == undefined) {
+      node.next = this.head;
+      this.head = node;
+      this.size++;
     }
-    node.next = current.next;
-    current.next = node;
-    this.size++;
+    else {
+      let current = this.head;
+      while (pos > 1) {
+        current = current.next;
+        pos--
+      }
+      node.next = current.next;
+      current.next = node;
+      this.size++;
+    }
   }
 
   getIndex = (value) => {
@@ -80,21 +79,18 @@ var middleNode = function (head) {
 }
 
 let list = new LinkedList()
-list.insertAtEnd(1)
-list.insertAtEnd(2)
-list.insertAtEnd(3)
-list.insertAtEnd(4)
-list.insertAtEnd(5)
-list.insertAtEnd(6)
+list.insert(1)
+list.insert(2)
+list.insert(38)
+list.insert(64)
+list.insert(65)
+list.insert(69)
+list.insertStart(22, 0)
+list.insertStart(666)
+list.insertStart(76, 1)
+list.insertStart(66, 1)
 let hd = list.head
-
-let list1 = new LinkedList()
-list1.insertAtEnd(1)
-list1.insertAtEnd(2)
-list1.insertAtEnd(3)
-list1.insertAtEnd(4)
-list1.insertAtEnd(5)
-let hd1 = list1.head
+list.printList()
+list.getIndex(64)
 
 console.log(middleNode(hd))
-console.log(middleNode(hd1))
