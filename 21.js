@@ -68,7 +68,7 @@ l1.insert(2)
 l1.insert(4)
 l2.insert(1)
 l2.insert(3)
-l2.insert(4)
+
 
 var mergeTwoLists = function (list1, list2) {
   if (list1 == null) return list2;
