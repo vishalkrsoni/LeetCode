@@ -2,12 +2,9 @@ class Stack {
   constructor() {
     this.arr = []
   }
-  push = (item) => this.arr.push(item)
-
+  push = (...item) => this.arr.push(...item)
   pop = () => this.isEmpty() ? `Empty Stack` : this.arr.pop()
-
   peek = () => this.isEmpty() ? `Empty Stack` : this.arr[this.arr.length - 1]
-
   isEmpty = () => this.arr.length == 0
 }
 
