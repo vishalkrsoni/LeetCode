@@ -3,7 +3,6 @@ var firstMissingPositive = function (nums) {
   let posNums = nums.filter(num => num > 0)
   let max = Math.max(...posNums)
   let numSet = new Set(posNums)
-  
   while (firstMissing <= max) {
     if (!numSet.has(firstMissing)) return firstMissing
     firstMissing++
