@@ -14,7 +14,6 @@ const mergeTwoLists = (list1, list2) => {
 const mergeKLists = (lists) => {
   if (lists.length === 0) return null;
 
-
   for (let i = 1; i < lists.length; i++) {
     lists[0] = mergeTwoLists(lists[0], lists[i]);
   }
